@@ -1,58 +1,70 @@
 // TODO: Include packages needed for this application
 
-const fs = require("fs");
+const logo = require("./lib/logo")
+const { square, triangle, circle} = require("./lib/shapes");
 const inquirer = require('inquirer');
-const { default: Choices } = require("inquirer/lib/objects/choices");
-const generateMarkdown = require("./utils/generateMarkdown");
+const {writeFile} = require("fs/promises")
+
 
 
 // TODO: Create an array of questions for user input
+
 const questions = [
     {
         type: 'input',
-        name: 'title',
-        message: 'what is the title of your project'
+        name: 'text',
+        message: 'what initials would you like to be on the logo.(1-3 characters)'
 
     },
     {
         type: 'input',
-        name: 'about',
-        message: 'What is your project about?'
+        name: 'textcolor',
+        message: 'color of text? hexadecimal numbers are allowed'
 
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'What are the steps required to install your project?'
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Provide instructions and examples for use'
-    },
-    {
-        type: 'input',
-        name: 'credits',
-        message: " list collaborators, third party assets or tutorials used to to make this project. "
     },
     {
         type: 'list',
-        name: 'license',
-        message: 'List any license used for the project if you are unsure refer to (https://choosealicense.com/)',
-        choices: ['none', 'MIT', 'GNU', 'Apache', 'moxilla',]
+        name: 'shape',
+        message: 'Choose a logo shape',
+        choices: ['circle','square', 'triangle']
     },
     {
         type: 'input',
-        name: 'email', 
-        message: 'enter your email'
+        name: 'shapeColor',
+        message: 'what color would you like your logo to be?'
     },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'Enter your GitHub profile name '
+     
+];
+
+.then((response) => {
+    console.log(res);
+
+    let logoShape;
+
+    if(response.shape === 'square'){
+        logoShape = new square();
     }
 
-];
+    if(response.shape === 'triangle'){
+        logoShape = new triangle();
+    }
+
+    if(response.shape === 'circle'){
+        logoShape = new circle ();
+    }
+
+    logoShape.setColor(response.shapeColor)
+
+    const logo = new LOGO();
+ logo.setText(response.test, response.textColor);
+ logo.setShape(logoShape);
+ return writeFile("./examples", logo.render);
+ .then(() => {
+    console.log(" logo created and places in the examples folders")
+} )
+
+
+} )
 
 
 
@@ -62,6 +74,7 @@ function writeToFile(fileName, data) {
 }  
 
 // TODO: Create a function to initialize app
+
 function init() {
     inquirer
     .prompt(questions)
@@ -73,4 +86,9 @@ function init() {
 }
 
 // Function call to initialize app
-init();
+generateLOGO();
+
+
+const shape = new Triangle();
+shape.setColor("blue");
+expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
