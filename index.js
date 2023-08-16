@@ -8,85 +8,83 @@ const {writeFile} = require("fs/promises")
 
 
 // TODO: Create an array of questions for user input
+const generateLOGO = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'text',
+            message: 'what initials would you like to be on the logo.(1-3 characters)'
+    
+        },
+        {
+            type: 'input',
+            name: 'textcolor',
+            message: 'color of text? hexadecimal numbers are allowed'
+    
+        },
+        {
+            type: 'list',
+            name: 'shape',
+            message: 'Choose a logo shape',
+            choices: ['circle','square', 'triangle']
+        },
+        {
+            type: 'input',
+            name: 'shapeColor',
+            message: 'what color would you like your logo to be?'
+        },
+    ])
+    .then((response) => {
+        console.log(res);
+    
+        let logoShape;
+    
+        if(response.shape === 'square'){
+            logoShape = new square();
+        }
+    
+        if(response.shape === 'triangle'){
+            logoShape = new triangle();
+        }
+    
+        if(response.shape === 'circle'){
+            logoShape = new circle ();
+        }
+    
+        logoShape.setColor(response.shapeColor)
+    
+        const logo = new LOGO();
+     logo.setText(response.test, response.textColor);
+     logo.setShape(logoShape);
+     return writeFile("./examples", logo.render());
+    }) .then(() => {
+        console.log(" logo created and places in the examples folders");
+    })
 
-const questions = [
-    {
-        type: 'input',
-        name: 'text',
-        message: 'what initials would you like to be on the logo.(1-3 characters)'
-
-    },
-    {
-        type: 'input',
-        name: 'textcolor',
-        message: 'color of text? hexadecimal numbers are allowed'
-
-    },
-    {
-        type: 'list',
-        name: 'shape',
-        message: 'Choose a logo shape',
-        choices: ['circle','square', 'triangle']
-    },
-    {
-        type: 'input',
-        name: 'shapeColor',
-        message: 'what color would you like your logo to be?'
-    },
-     
-];
-
-.then((response) => {
-    console.log(res);
-
-    let logoShape;
-
-    if(response.shape === 'square'){
-        logoShape = new square();
-    }
-
-    if(response.shape === 'triangle'){
-        logoShape = new triangle();
-    }
-
-    if(response.shape === 'circle'){
-        logoShape = new circle ();
-    }
-
-    logoShape.setColor(response.shapeColor)
-
-    const logo = new LOGO();
- logo.setText(response.test, response.textColor);
- logo.setShape(logoShape);
- return writeFile("./examples", logo.render);
- .then(() => {
-    console.log(" logo created and places in the examples folders")
-} )
-
-
-} )
+};
+ 
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(fileName, data);
-}  
+// function writeToFile(fileName, data) {
+//     return fs.writeFileSync(fileName, data);
+// }  
 
 // TODO: Create a function to initialize app
 
-function init() {
-    inquirer
-    .prompt(questions)
-    .then((answers) => {
-    console.log(answers)
-    const template = generateMarkdown(answers)
-    writeToFile('README.md', generateMarkdown(answers));
-    });
-}
+// function init() {
+//     inquirer
+//     .prompt(questions)
+//     .then((answers) => {
+//     console.log(answers)
+//     const template = generateMarkdown(answers)
+//     writeToFile('README.md', generateMarkdown(answers));
+//     });
+// }
 
-// Function call to initialize app
-generateLOGO();
+// // Function call to initialize app
+// generateLOGO();
 
 
 const shape = new Triangle();
