@@ -58,9 +58,9 @@ const generateLOGO = () => {
         // logoText.setText(response.shapeText)
     
         const shape = new logo ();
-     logo.setText(response.text, response.textColor);
-     logo.setShape(logoShape);
-     return writeFile("./examples", logo.render());
+     shape.setText(response.text, response.textColor);
+     shape.setShape(logoShape);
+     return writeFile("./examples/logo.svg", shape.render());
     }) .then(() => {
         console.log(" logo created and places in the examples folders");
     })
