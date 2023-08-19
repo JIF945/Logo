@@ -1,10 +1,11 @@
 // TODO: Include packages needed for this application
 
-const LOGO = require("./lib/logo");
+const logo = require("./lib/logo");
 // const shape = require("./lib/logo");
 const { square, triangle, circle} = require("./lib/shapes");
 const inquirer = require('inquirer');
 const {writeFile} = require("fs/promises");
+const logo = require("./lib/logo");
 
 
 
@@ -56,7 +57,7 @@ const generateLOGO = () => {
         logoShape.setColor(response.shapeColor)
         // logoText.setText(response.shapeText)
     
-        const shape = new LOGO ();
+        const shape = new logo ();
      logo.setText(response.text, response.textColor);
      logo.setShape(logoShape);
      return writeFile("./examples", logo.render());
