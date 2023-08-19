@@ -35,25 +35,25 @@ const generateLOGO = () => {
         },
     ])
     .then((response) => {
-        console.log(res);
+        console.log(response);
     
         let logoShape;
     
-        if(response.shape === 'square'){
-            logoShape = new square();
+        if(response.shape === 'circle'){
+            logoShape = new circle();
         }
     
         if(response.shape === 'triangle'){
             logoShape = new triangle();
         }
     
-        if(response.shape === 'circle'){
-            logoShape = new circle ();
+        if(response.shape === 'square'){
+            logoShape = new square ();
         }
     
         logoShape.setColor(response.shapeColor)
     
-        const logo = new LOGO();
+        const logo = new lOGO();
      logo.setText(response.test, response.textColor);
      logo.setShape(logoShape);
      return writeFile("./examples", logo.render());
@@ -83,10 +83,10 @@ const generateLOGO = () => {
 //     });
 // }
 
-// // Function call to initialize app
-// generateLOGO();
+// Function call to initialize app
+generateLOGO();
 
 
-const shape = new Triangle();
-shape.setColor("blue");
-expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
+// const shape = new Triangle();
+// shape.setColor("blue");
+// expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
