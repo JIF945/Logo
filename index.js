@@ -53,9 +53,10 @@ const generateLOGO = () => {
         }
     
         logoShape.setColor(response.shapeColor)
+        // logoText.setText(response.shapeText)
     
-        const logo = new logo();
-     logo.setText(response.test, response.textColor);
+        const shape = new logo ();
+     logo.setText(response.text, response.textColor);
      logo.setShape(logoShape);
      return writeFile("./examples", logo.render());
     }) .then(() => {
