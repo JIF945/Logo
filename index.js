@@ -5,7 +5,7 @@ const logo = require("./lib/logo");
 const { square, triangle, circle} = require("./lib/shapes");
 const inquirer = require('inquirer');
 const {writeFile} = require("fs/promises");
-const logo = require("./lib/logo");
+// const logo = require("./lib/logo");
 
 
 
