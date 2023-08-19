@@ -58,7 +58,7 @@ const generateLOGO = () => {
         // logoText.setText(response.shapeText)
     
         const shape = new logo ();
-     shape.setText(response.text, response.textColor);
+     shape.setText(response.text, response.textcolor);
      shape.setShape(logoShape);
      return writeFile("./examples/logo.svg", shape.render());
     }) .then(() => {
