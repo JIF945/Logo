@@ -5,7 +5,10 @@ Scalable Vector Graphics (SVG) is a XML-based vector image format for defining t
 
 the project consist of a series of questions, from the answers on the questionaire a SVG is made.  
 
+## Generated SVG's
 
+* [Triangle SVG](./examples/Triangle.svg)
+* [Circle SVG](./examples/circle.svg)
 
 
 ## Table of Contents
@@ -31,6 +34,8 @@ packages below are needed to run the application.
 -Javascript
 
 -NPM
+
+-Preview SVG ( optional )
 
 ## Installation
 
