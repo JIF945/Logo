@@ -9,19 +9,20 @@ the project consist of a series of questions, from the answers on the questionai
 
 * [Triangle SVG](./examples/Triangle.svg)
 * [Circle SVG](./examples/circle.svg)
+* [Square SVG](./examples/square1.png)
 
 
 ## Table of Contents
 
--[Description](#description)
+* [Description](#description)
 
--[Technology](#technology)
+* [Technology](#technology)
 
--[Installation](#installation)
+* [Installation](#installation)
 
--[Usage](#usage)
+* [Usage](#usage)
 
--[Test](#test)
+* [Test](#test)
 
 
 ## Technology
@@ -46,16 +47,23 @@ packages below are needed to run the application.
 ## Usage
 To run the application enter the command in bash 
 
+[Video demo](https://drive.google.com/file/d/1mwhkOd7K3B6UTr4oWAm9LotKIcY9Kp32/view)
+
+
 ```bash
 node index.js
 ```
 
 ## Test
 
+[Test demo](https://drive.google.com/file/d/1HSEBzK-kstQBbCEKVJFIH0YPSr3BaI0P/view)
+
 To run the tests enter the command in bash 
 ```
 Npm run test
 ```
+
+
 
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)

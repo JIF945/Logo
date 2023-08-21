@@ -1,11 +1,10 @@
 // TODO: Include packages needed for this application
 
 const logo = require("./lib/logo");
-// const shape = require("./lib/logo");
 const { square, triangle, circle} = require("./lib/shapes");
 const inquirer = require('inquirer');
 const {writeFile} = require("fs/promises");
-// const logo = require("./lib/logo");
+
 
 
 
@@ -55,7 +54,7 @@ const generateLOGO = () => {
         }
     
         logoShape.setColor(response.shapeColor)
-        // logoText.setText(response.shapeText)
+      
     
         const shape = new logo ();
      shape.setText(response.text, response.textcolor);
@@ -67,30 +66,7 @@ const generateLOGO = () => {
 
 };
  
-
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     return fs.writeFileSync(fileName, data);
-// }  
-
-// TODO: Create a function to initialize app
-
-// function init() {
-//     inquirer
-//     .prompt(questions)
-//     .then((answers) => {
-//     console.log(answers)
-//     const template = generateMarkdown(answers)
-//     writeToFile('README.md', generateMarkdown(answers));
-//     });
-// }
-
 // Function call to initialize app
 generateLOGO();
 
 
-// const shape = new Triangle();
-// shape.setColor("blue");
-// expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
