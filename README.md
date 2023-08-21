@@ -26,28 +26,28 @@ the project consist of a series of questions, from the answers on the questionai
 
 * [Credits](#credits)
 
-* [Contact](#contact)
+* [Repo](#repo)
 
 
 
 ## Technology
 packages below are needed to run the application. 
 
--Inquirer
+* Inquirer
 
--Jest
+* Jest
 
--Javascript
+* Javascript
 
--NPM
+* NPM
 
--Preview SVG ( optional )
+* Preview SVG ( optional )
 
 ## Installation
 
--Install and run Nodes
+* Install and run Nodes
 
--Install live server to check svg
+* Install live server to check svg
 
 ## Usage
 To run the application enter the command in bash 
@@ -70,11 +70,13 @@ Npm run test
 
 ## Credits
 
-NA
+BCS Learning Assistant
 
 
-## contact
+## Repo
 
 [Github](https://jif945.github.io/Logo/)
 
+
+## License
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
