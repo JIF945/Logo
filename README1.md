@@ -7,9 +7,9 @@ the project consist of a series of questions, from the answers on the questionai
 
 ## Generated SVG's
 
-* [Triangle SVG](./examples/Triangle.svg)
-* [Circle SVG](./examples/circle.svg)
-* [Square SVG](./examples/square1.png)
+ ![Triangle SVG](./examples/Triangle.svg) 
+ ![Circle SVG](./examples/circle.svg)
+ ![Square SVG](./examples/square.svg)
 
 
 ## Table of Contents
